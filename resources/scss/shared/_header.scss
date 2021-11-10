@@ -1,0 +1,15 @@
+.header {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: $solidRedBorder;
+    background-color: $primaryBackgroundColour;
+    padding: $headerFooterPadding;
+    min-height: $headerFooterHeight;
+
+    .CTA {
+        @include ctaLinks;
+    }
+}

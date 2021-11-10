@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LandingPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('/layouts.app');
-});
+Route::get('/', [LandingPageController::class, 'index']);
+// Route::get('/register', [LandingPageController::class, 'register']);
+
+//Route group
+// Route::group(['prefix' => 'oAuth'], static function () {
+//     Route::get('/', [LandingPageController::class, 'index']); 
+// });
+
+
+// Route::group(['prefix' => 'tasks'], static function () {
+//     Route::get('/', [LandingPageController::class, 'index']); 
+// });
+
+
+

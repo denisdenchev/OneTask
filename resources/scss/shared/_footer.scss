@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $primaryBackgroundColour;
+    padding: $headerFooterPadding;
+    border-top: $solidRedBorder;
+    min-height: $headerFooterHeight;
+}

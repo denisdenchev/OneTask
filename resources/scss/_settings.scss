@@ -1,0 +1,51 @@
+//Global Variables
+
+//Colours
+$primaryDarkColour: rgb(31, 29, 29);
+$primaryBackgroundColour: #17C3B2;
+$primaryFontColor: #227C9D;
+$whiteFontColor: #fff;
+$yellowThemeColor: #FFCB77;
+$dangerColour: #f7030c;
+$alertColour: #FE6D73;
+$successColour: rgb(2, 241, 2);
+$beige: #FEF9EF;
+
+//Height & Width
+$headerFooterHeight: 15vh;
+$contentHeight: 70vh;
+
+//Margin & Padding
+$headerFooterPadding: 10px 20px;
+
+//Borders
+$solidRedBorder: 4px solid red;
+$inputBorders: 2px solid $primaryBackgroundColour;
+$inputBordersRadius: 5px;
+
+//Font Sizes
+$ctaFontSize : 1.2rem;
+$primaryFontSize: 1rem;
+
+@mixin inputField {
+    height: 30px;
+    margin-top: 5px;
+    padding: 5px;
+    border: $inputBorders;
+    border-radius: $inputBordersRadius;
+    font-size: $primaryFontSize;
+}
+
+//Font boldness
+$lightlyBold: 600;
+$bold: 700;
+$bolder: 800;
+$heavyBold:900;
+
+
+@mixin ctaLinks {
+    font-size: $ctaFontSize;
+    text-decoration: none;
+    color: $primaryDarkColour;
+    font-weight: $lightlyBold;
+}

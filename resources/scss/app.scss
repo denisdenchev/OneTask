@@ -1,10 +1,36 @@
-$primary-color: red;
-$primary-color-text: white;
+//Variables
+@import './settings';
+
+//Modules
+@import './modules/home';
+
+
+//Partials
+@import './shared/footer';
+@import './shared/header';
+
+//Components
+@import './components.scss';
+
+
+//Global styling for reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 body {
-    background-color: $primary-color;
+    overflow: hidden;
 
-    h1 {
-        color: $primary-color-text;
+    .bodyContent {
+        min-height: $contentHeight;
+        max-height: 100vh;
+        background-color: $beige;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }

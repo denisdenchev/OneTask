@@ -1,6 +1,125 @@
-body {
-  background-color: red;
+.content {
+  background-color: #FEF9EF;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
-body h1 {
-  color: white;
+.content .headerText {
+  color: #227C9D;
+}
+.content .subText {
+  color: #227C9D;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.content .link a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #FE6D73;
+  font-weight: 600;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #17C3B2;
+  padding: 10px 20px;
+  border-top: 4px solid red;
+  min-height: 15vh;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 4px solid red;
+  background-color: #17C3B2;
+  padding: 10px 20px;
+  min-height: 15vh;
+}
+.header .CTA {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #1f1d1d;
+  font-weight: 600;
+}
+
+.logo {
+  height: 75px;
+  width: 75px;
+}
+
+.button {
+  width: 100px;
+  height: 30px;
+  box-shadow: 0px 2px 15px 0px #1f1d1d;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.button.submitButton {
+  background-color: #17C3B2;
+}
+.button.viewButton {
+  background-color: #227C9D;
+}
+.button.editButton {
+  background-color: #FFCB77;
+}
+.button.createButton {
+  background-color: #17C3B2;
+}
+.button.deleteButton {
+  background-color: #f7030c;
+}
+.button.completeButton {
+  background-color: #02f102;
+}
+.button.cancelButton {
+  background-color: #FE6D73;
+}
+
+.inputsWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.inputsWrapper .labelText {
+  color: #227C9D;
+  font-size: 1.2rem;
+}
+.inputsWrapper input {
+  height: 30px;
+  margin-top: 5px;
+  padding: 5px;
+  border: 2px solid #17C3B2;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+body .bodyContent {
+  min-height: 70vh;
+  max-height: 100vh;
+  background-color: #FEF9EF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
