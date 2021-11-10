@@ -41,12 +41,16 @@
         background-color: $alertColour;
     }
 
+    &:hover {
+        cursor: pointer;
+    }
+
 }
 
 .inputsWrapper {
+    width: 300px;
     display: flex;
     flex-direction: column;
-    width: 80%;
 
     .labelText {
         color: $primaryFontColor;
@@ -54,6 +58,6 @@
     }
 
     input {
-    @include inputField;
-}
+        @include inputField;
+    }
 }

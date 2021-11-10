@@ -10,7 +10,7 @@ class LandingPageController extends Controller
         return view('home');
     }
 
-    // public function index() {
-    //     return view('register');
-    // }
+    public function register() {
+        return view('register');
+    }
 }

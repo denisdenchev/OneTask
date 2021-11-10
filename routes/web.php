@@ -15,7 +15,7 @@ use App\Http\Controllers\LandingPageController;
 */
 
 Route::get('/', [LandingPageController::class, 'index']);
-// Route::get('/register', [LandingPageController::class, 'register']);
+Route::get('/register', [LandingPageController::class, 'register']);
 
 //Route group
 // Route::group(['prefix' => 'oAuth'], static function () {

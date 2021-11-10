@@ -1,26 +1,32 @@
-.content {
+.homeContent {
   background-color: #FEF9EF;
   height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  width: 80%;
 }
-.content .headerText {
+.homeContent .headerText {
   color: #227C9D;
 }
-.content .subText {
+.homeContent .subText {
   color: #227C9D;
   font-size: 1rem;
   font-weight: 600;
 }
-.content .link a {
+.homeContent .link a {
   font-size: 1rem;
   text-decoration: none;
   color: #FE6D73;
   font-weight: 600;
 }
 
+@media only screen and (max-width: 767px) {
+  .homeContent {
+    height: 60vh;
+  }
+}
 .footer {
   display: flex;
   flex-direction: row;
@@ -86,11 +92,14 @@
 .button.cancelButton {
   background-color: #FE6D73;
 }
+.button:hover {
+  cursor: pointer;
+}
 
 .inputsWrapper {
+  width: 300px;
   display: flex;
   flex-direction: column;
-  width: 80%;
 }
 .inputsWrapper .labelText {
   color: #227C9D;
