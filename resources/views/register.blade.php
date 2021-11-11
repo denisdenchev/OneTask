@@ -1,12 +1,6 @@
 <body>
     @extends('layouts.app')
 
-    @section('header')
-    <div>
-        <x-header linkUrl="/" linkText="Log in"></x-header>
-    </div>
-    @endsection
-
     @section('content')
     <div class="homeContent">
         <h2 class="headerText">Register</h2>

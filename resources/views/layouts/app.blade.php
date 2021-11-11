@@ -8,11 +8,11 @@
 </head>
 <body>
     <header>
-        @yield('header', 'default value')
+        @include('shared.header')
     </header>
 
     <div class="bodyContent">
-        @yield('content', 'default value')
+        @yield('content', 'I am the body')
     </div>
 
     <footer>

@@ -1,4 +1,4 @@
 <div class="inputsWrapper">
     <label for="{{ $inputName }}" class="labelText">{{ $labelValue }}</label>
-    <input type="{{ $inputType }}" name="{{ $inputName }}" placeholder="{{ $inputPlcHolder }}">
+    <input type="{{ $inputType }}" name="{{ $inputName }}" placeholder="{{ $inputPlcHolder }}" required>
 </div>
