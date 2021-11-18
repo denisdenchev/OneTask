@@ -1,0 +1,10 @@
+.errors {
+
+    width: 85%;
+
+    .error {
+        list-style: decimal;
+        color: $dangerColour;
+        font-weight: $bold;
+    }
+}

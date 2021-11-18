@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 100%;
 }
 .homeContent .headerText {
   color: #227C9D;
@@ -26,6 +26,15 @@
     height: 60vh;
   }
 }
+.errors {
+  width: 85%;
+}
+.errors .error {
+  list-style: decimal;
+  color: #f7030c;
+  font-weight: 700;
+}
+
 .footer {
   display: flex;
   flex-direction: row;

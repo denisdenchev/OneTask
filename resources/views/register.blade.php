@@ -12,9 +12,9 @@
             <x-input-label-wrapper labelValue="Password" inputType="password" inputName="userPassword" inputValue="{{ old('userPassword') ?? ''}}" inputPlcHolder="example123"></x-input-label-wrapper>
             {{-- Validation --}}
             @if($errors->any())
-                <ul>
+                <ul class='errors'>
                     @foreach ($errors -> all() as $error )
-                        <li>{{ $error }}</li>
+                        <li class="error">{{ $error }}</li>
                     @endforeach
                 </ul>
             @endif

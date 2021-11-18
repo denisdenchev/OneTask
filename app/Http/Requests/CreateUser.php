@@ -24,9 +24,9 @@ class CreateUser extends FormRequest
     public function rules()
     {
         return [
-                'name' => 'required',
-                'userEmail' => 'required|email',
-                'userPassword' => 'required'
+            'name' => 'required',
+            'userEmail' => 'unique:users,email, required|email', //Validation for a unique email address
+            'userPassword' => 'required'
         ];
     }
 }
