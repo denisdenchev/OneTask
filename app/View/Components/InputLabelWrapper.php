@@ -7,23 +7,25 @@ use Illuminate\View\Component;
 class InputLabelWrapper extends Component
 {
 
-    public $labelFor;
+    // public $labelFor;
     public $labelValue;
     public $inputType;
     public $inputName;
     public $inputPlcHolder;
+    public $inputValue;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(string $labelValue, string $inputType, string $inputName, string $inputPlcHolder)
+    public function __construct(string $labelValue, string $inputType, string $inputName, string $inputPlcHolder, string $inputValue)
     {
         $this->labelValue = $labelValue;
         $this->inputType = $inputType;
         $this->inputName = $inputName;
         $this->inputPlcHolder = $inputPlcHolder;
+        $this->inputValue = $inputValue;
     }
 
     /**

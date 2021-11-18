@@ -1,1 +1,1 @@
-<input type="button" value="{{ $btnText }}" class="button {{ $buttonClass() }}">
+<input type="{{ $btnAction }}" value="{{ $btnText }}" class="button {{ $buttonClass() }}">

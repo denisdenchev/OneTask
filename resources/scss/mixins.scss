@@ -1,0 +1,15 @@
+@mixin inputField {
+    height: 30px;
+    margin-top: 5px;
+    padding: 5px;
+    border: $inputBorders;
+    border-radius: $inputBordersRadius;
+    font-size: $primaryFontSize;
+}
+
+@mixin ctaLinks {
+    font-size: $ctaFontSize;
+    text-decoration: none;
+    color: $primaryDarkColour;
+    font-weight: $lightlyBold;
+}

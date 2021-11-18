@@ -14,18 +14,14 @@ use App\Http\Controllers\LandingPageController;
 |
 */
 
-Route::get('/', [LandingPageController::class, 'index']);
-Route::get('/register', [LandingPageController::class, 'register']);
 
-//Route group
-// Route::group(['prefix' => 'oAuth'], static function () {
-//     Route::get('/', [LandingPageController::class, 'index']); 
-// });
-
-
-// Route::group(['prefix' => 'tasks'], static function () {
-//     Route::get('/', [LandingPageController::class, 'index']); 
-// });
-
-
+Route::group(['prefix' => '/'], static function () {
+    Route::get('/', [LandingPageController::class, 'index'])->name('login');
+    Route::get('/register', [LandingPageController::class, 'register'])->name('register');
+    Route::post('/register', [LandingPageController::class, 'createUser'])->name('createuser');
+    Route::get('/registerSuccess', [LandingPageController::class, 'registerSUccess'])->name('registerSuccess');
+    // Route::get('/registerSuccess', function () {
+    //     return view('registerSuccess');
+    // });
+});
 

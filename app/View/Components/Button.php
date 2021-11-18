@@ -8,16 +8,18 @@ class Button extends Component
 {
     public $btnText;
     public $typeOfButton;
+    public $btnAction;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(string $btnText, string $typeOfButton)
+    public function __construct(string $btnText, string $typeOfButton, string $btnAction)
     {
         $this->btnText = $btnText;
         $this->typeOfButton = $typeOfButton;
+        $this->btnAction = $btnAction;
     }
 
 
@@ -36,6 +38,8 @@ class Button extends Component
             return 'deleteButton' ;
         } elseif ($this->typeOfButton === 'complete') {
             return 'completeButton' ;
+        } elseif ($this->typeOfButton === 'link') {
+            return 'linkButton';
         }
     }
 
