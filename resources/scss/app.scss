@@ -4,6 +4,7 @@
 //Modules
 @import './modules/home';
 @import './modules/register';
+@import './modules/dashboard';
 
 //Mixins
 @import './mixins.scss';
@@ -26,15 +27,16 @@
 
 
 body {
-    overflow: hidden;
+    // overflow: hidden;
 
     .bodyContent {
         min-height: $contentHeight;
-        max-height: 100vh;
+        // max-height: 100vh;
         background-color: $beige;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        overflow: scroll;
     }
 }

@@ -3,11 +3,17 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     border-bottom: $solidRedBorder;
     background-color: $primaryBackgroundColour;
     padding: $headerFooterPadding;
     min-height: $headerFooterHeight;
+
+    .headerGreeting {
+        margin: 5px 0;
+        font-weight: $bold;
+        color: $primaryDarkColour;
+    }
 
     .CTA {
         @include ctaLinks;

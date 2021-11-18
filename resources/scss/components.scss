@@ -5,7 +5,8 @@
 
 .button {
     margin: 10px 0;
-    width: 100px;
+    padding: 2px 5px;
+    min-width: 65px;
     height: 30px;
     box-shadow: 0px 2px 15px 0px $primaryDarkColour;
     border-radius: 3px;
@@ -61,5 +62,39 @@
 
     input {
         @include inputField;
+    }
+}
+
+.card {
+    margin: 20px;
+    width: 250px;
+    height: 200px;
+    background-color: rgb(177, 177, 177);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .cardTitle {
+        text-align: center;
+        margin: 0 0 5px 0;
+        color: $primaryFontColor;
+    }
+
+    .cardDetails {
+        max-height: 100px;
+        overflow: hidden;
+        color: $whiteFontColor;
+        border-radius: 10px;
+    }
+
+    .cardAction {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0;
     }
 }

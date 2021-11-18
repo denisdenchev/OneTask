@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +21,6 @@ Route::group(['prefix' => '/'], static function () {
     Route::get('/register', [LandingPageController::class, 'register'])->name('register');
     Route::post('/register', [LandingPageController::class, 'createUser'])->name('createuser');
     Route::get('/registerSuccess', [LandingPageController::class, 'registerSUccess'])->name('registerSuccess');
-    // Route::get('/registerSuccess', function () {
-    //     return view('registerSuccess');
-    // });
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 });
 
