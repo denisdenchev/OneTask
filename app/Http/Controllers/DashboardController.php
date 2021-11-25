@@ -9,4 +9,5 @@ class DashboardController extends Controller
     public function dashboard() {
         return view('dashboard',['linkUrl'=>route('login'),'linkText'=>'Log out']);
     }
+
 }

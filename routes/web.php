@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,9 +19,16 @@ use App\Http\Controllers\DashboardController;
 
 Route::group(['prefix' => '/'], static function () {
     Route::get('/', [LandingPageController::class, 'index'])->name('login');
-    Route::get('/register', [LandingPageController::class, 'register'])->name('register');
-    Route::post('/register', [LandingPageController::class, 'createUser'])->name('createuser');
-    Route::get('/registerSuccess', [LandingPageController::class, 'registerSUccess'])->name('registerSuccess');
-    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('user/login', [LandingPageController::class, 'index'])->name('login');
+    Route::get('user/register', [LandingPageController::class, 'register'])->name('register');
 });
+
+Route::group(['prefix' => '/user'], static function () {
+    Route::post('/login', [AuthController::class, 'loginAuth'])->name('loginauth');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::post('/register', [AuthController::class, 'createUser'])->name('createuser');
+    Route::get('/registerSuccess', [AuthController::class, 'registerSUccess'])->name('registerSuccess');
+    Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard')->middleware('auth');
+});
+
 

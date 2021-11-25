@@ -25,8 +25,8 @@ class CreateUser extends FormRequest
     {
         return [
             'name' => 'required',
-            'userEmail' => 'unique:users,email, required|email', //Validation for a unique email address
-            'userPassword' => 'required'
+            'email' => 'unique:users,email, required|email', //Validation for a unique email address
+            'password' => 'required|confirmed|min:6'
         ];
     }
 }

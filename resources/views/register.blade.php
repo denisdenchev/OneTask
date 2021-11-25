@@ -8,8 +8,9 @@
             @csrf
             <h2 class="headerText">Register</h2>
             <x-input-label-wrapper labelValue="Name" inputType="text" inputName="name" inputValue="{{ old('name') ?? ''}}" inputPlcHolder="John Doe"></x-input-label-wrapper>
-            <x-input-label-wrapper labelValue="Email" inputType="email" inputName="userEmail" inputValue="{{ old('userEmail') ?? ''}}" inputPlcHolder="example@mail.com" ></x-input-label-wrapper>
-            <x-input-label-wrapper labelValue="Password" inputType="password" inputName="userPassword" inputValue="{{ old('userPassword') ?? ''}}" inputPlcHolder="example123"></x-input-label-wrapper>
+            <x-input-label-wrapper labelValue="Email" inputType="email" inputName="email" inputValue="{{ old('userEmail') ?? ''}}" inputPlcHolder="example@mail.com" ></x-input-label-wrapper>
+            <x-input-label-wrapper labelValue="Password" inputType="password" inputName="password" inputValue="{{ old('userPassword') ?? ''}}" inputPlcHolder="example123"></x-input-label-wrapper>
+            <x-input-label-wrapper labelValue="Confirm Password" inputType="password" inputName="password_confirmation" inputValue="{{ old('confirmUserPassword') ?? ''}}" inputPlcHolder="example123"></x-input-label-wrapper>
             {{-- Validation --}}
             @if($errors->any())
                 <ul class='errors'>
@@ -20,7 +21,7 @@
             @endif
             <x-button btnText="Submit" typeOfButton="submit" btnAction="submit"></x-button>
             <p class="subText">You already have an account?</p>
-            <p class="link"><a href={{ route('login') }}'>Log in here</a></p>
+            <p class="link"><a href='{{ route('login')}}'>Log in here</a></p>
         </form>
     </div>
     @endsection
