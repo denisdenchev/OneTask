@@ -17,6 +17,7 @@ $contentHeight: 70vh;
 
 //Margin & Padding
 $headerFooterPadding: 10px 20px;
+$primary20padding: 20px;
 
 //Borders
 $solidRedBorder: 4px solid red;
@@ -32,3 +33,7 @@ $lightlyBold: 600;
 $bold: 700;
 $bolder: 800;
 $heavyBold:900;
+
+//FLex display
+$columnWrap:column wrap;
+$rowWrap: row wrap;

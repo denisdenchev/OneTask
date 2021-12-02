@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateUser;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
@@ -22,7 +24,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended(route('dashboard'));
+            return redirect()->intended(route('tasks.index'));
         }
 
         return back()->withErrors([
@@ -31,10 +33,14 @@ class AuthController extends Controller
     }
 
     //User logout
-    function logout()
+    function logout(Request $request)
     {
-     Auth::logout();
-     return redirect(route('login'));
+        Auth::logout();
+
+        $request->session()->flush();  
+        $request->session()->invalidate();
+
+        return redirect(route('login'));
     }
 
 

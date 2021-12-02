@@ -12,10 +12,11 @@
     .headerGreeting {
         margin: 5px 0;
         font-weight: $bold;
-        color: $yellowThemeColor;
+        color: $primaryDarkColour;
     }
 
     .CTA {
         @include ctaLinks;
     }
+
 }

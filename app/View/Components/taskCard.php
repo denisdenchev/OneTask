@@ -6,14 +6,26 @@ use Illuminate\View\Component;
 
 class taskCard extends Component
 {
+
+    public $title;
+    public $details;
+    public $editTask;
+    public $deleteTask;
+    public $viewTask;
+
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(string $title, string $details, string $editTask, string $deleteTask, string $viewTask)
     {
-        //
+        $this->title=$title;
+        $this->details=$details;
+        $this->editTask=$editTask;
+        $this->deleteTask=$deleteTask;
+        $this->viewTask=$viewTask;
     }
 
     /**

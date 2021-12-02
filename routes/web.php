@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DashboardController;
+// use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TasksController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -18,17 +19,17 @@ use Illuminate\Support\Facades\Auth;
 
 
 Route::group(['prefix' => '/'], static function () {
-    Route::get('/', [LandingPageController::class, 'index'])->name('login');
+    Route::get('/', [LandingPageController::class, 'index']);
     Route::get('user/login', [LandingPageController::class, 'index'])->name('login');
     Route::get('user/register', [LandingPageController::class, 'register'])->name('register');
 });
 
 Route::group(['prefix' => '/user'], static function () {
     Route::post('/login', [AuthController::class, 'loginAuth'])->name('loginauth');
-    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::post('/register', [AuthController::class, 'createUser'])->name('createuser');
     Route::get('/registerSuccess', [AuthController::class, 'registerSUccess'])->name('registerSuccess');
-    Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard')->middleware('auth');
+    Route::resource('/tasks', TasksController::class)->middleware('auth');
 });
 
 

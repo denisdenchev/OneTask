@@ -1,3 +1,9 @@
+.heading {
+  margin: 10px 0;
+  text-align: center;
+  color: #227C9D;
+}
+
 .homeContent {
   background-color: #FEF9EF;
   display: flex;
@@ -32,19 +38,23 @@
 
 .dashboard {
   width: 100%;
-  padding: 20px;
 }
 .dashboard .greeting {
-  color: #227C9D;
-}
-.dashboard .heading {
-  margin: 10px 0;
-  text-align: center;
   color: #227C9D;
 }
 .dashboard .tasksWrapper {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
+}
+
+.createTask {
+  min-height: 70vh;
+  padding: 20px;
+}
+.createTask .createTaskForm {
+  display: flex;
+  flex-flow: column wrap;
   align-items: center;
 }
 
@@ -73,7 +83,7 @@
 .header .headerGreeting {
   margin: 5px 0;
   font-weight: 700;
-  color: #FFCB77;
+  color: #1f1d1d;
 }
 .header .CTA {
   font-size: 1.2rem;
@@ -128,7 +138,7 @@
   margin: 10px 0;
   width: 300px;
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
 }
 .inputsWrapper .labelText {
   color: #227C9D;
@@ -136,6 +146,13 @@
 }
 .inputsWrapper input {
   height: 30px;
+  margin-top: 5px;
+  padding: 5px;
+  border: 2px solid #17C3B2;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.inputsWrapper textarea {
   margin-top: 5px;
   padding: 5px;
   border: 2px solid #17C3B2;
@@ -170,7 +187,7 @@
 .card .cardAction {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 5px 0;
 }
 
@@ -183,9 +200,6 @@
 body .bodyContent {
   min-height: 70vh;
   background-color: #FEF9EF;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 20px;
   overflow: scroll;
 }

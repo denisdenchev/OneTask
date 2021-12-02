@@ -1,10 +1,16 @@
 //Variables
 @import './settings';
 
+//Global Classes
+@import './global.scss';
+
 //Modules
 @import './modules/home';
 @import './modules/register';
-@import './modules/dashboard';
+@import './modules/dashboard/dashboard';
+
+// Modules -> Tasks
+@import './modules/dashboard/tasks/tasks.scss';
 
 //Mixins
 @import './mixins.scss';
@@ -33,10 +39,11 @@ body {
         min-height: $contentHeight;
         // max-height: 100vh;
         background-color: $beige;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        // display: flex;
+        //         flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        padding: $primary20padding;
         overflow: scroll;
     }
 }

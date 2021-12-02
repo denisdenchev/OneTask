@@ -1,21 +1,15 @@
 .dashboard {
     // height: 70vh;
     width: 100%;
-    padding: 20px;
+    // padding: $primary20padding;
 
     .greeting {
         color: $primaryFontColor;
     }
 
-    .heading {
-        margin: 10px 0;
-        text-align: center;
-        color: $primaryFontColor;
-    }
-
     .tasksWrapper {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: $rowWrap;
         align-items: center;
     }
 }

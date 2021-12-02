@@ -1,0 +1,11 @@
+//Create Task
+.createTask {
+    min-height: 70vh;
+    padding: $primary20padding;
+
+    .createTaskForm {
+        display: flex;
+        flex-flow: $columnWrap;
+        align-items: center;
+    }
+}
