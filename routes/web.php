@@ -6,6 +6,8 @@ use App\Http\Controllers\AuthController;
 // use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TasksController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\WelcomeMail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,8 +30,10 @@ Route::group(['prefix' => '/user'], static function () {
     Route::post('/login', [AuthController::class, 'loginAuth'])->name('loginauth');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::post('/register', [AuthController::class, 'createUser'])->name('createuser');
-    Route::get('/registerSuccess', [AuthController::class, 'registerSUccess'])->name('registerSuccess');
+    Route::get('/registerSuccess/{email}', [AuthController::class, 'registerSuccess'])->name('registerSuccess');
     Route::resource('/tasks', TasksController::class)->middleware('auth');
 });
+
+
 
 

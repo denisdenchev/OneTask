@@ -9,12 +9,11 @@
 @import './modules/register';
 @import './modules/dashboard/dashboard';
 
-// Modules -> Tasks
-@import './modules/dashboard/tasks/tasks.scss';
-
 //Mixins
 @import './mixins.scss';
 
+// Modules -> Tasks
+@import './modules/dashboard/tasks/tasks.scss';
 
 //Partials
 @import './shared/footer';
@@ -33,17 +32,11 @@
 
 
 body {
-    // overflow: hidden;
 
     .bodyContent {
         min-height: $contentHeight;
-        // max-height: 100vh;
         background-color: $beige;
-        // display: flex;
-        //         flex-direction: column;
-        // align-items: center;
-        // justify-content: center;
-        padding: $primary20padding;
+        padding: $primary20padding 60px;
         overflow: scroll;
     }
 }

@@ -14,13 +14,12 @@
                 <h2 class="heading">Tasks</h2>
                 <div class="tasksWrapper">
                     @foreach ($tasks as $task)
-                        <x-task-card title="{{ $task->title }}" details="{{ $task->details }}" editTask="{{ route('tasks.edit', $task->id) }}" viewTask="{{ route('tasks.show', $task->id) }}" deleteTask="{{ route('tasks.destroy', $task->id) }}"></x-task-card>
+                        <x-task-card title="{{ $task->title }}" details="{{ $task->details }}" cardStatus="{{ $task->completed }}" editTask="{{ route('tasks.edit', $task->id) }}" viewTask="{{ route('tasks.show', $task->id) }}" deleteTask="{{ route('tasks.destroy', $task->id) }}"></x-task-card>
                     @endforeach
                 </div>
                 @else
                 <p></p>
                 <h2 class="heading">It's time to create some tasks</h2>
-
             @endif
         @endif
     </div>

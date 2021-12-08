@@ -12,6 +12,7 @@ class taskCard extends Component
     public $editTask;
     public $deleteTask;
     public $viewTask;
+    public $cardStatus;
 
 
     /**
@@ -19,14 +20,24 @@ class taskCard extends Component
      *
      * @return void
      */
-    public function __construct(string $title, string $details, string $editTask, string $deleteTask, string $viewTask)
+    public function __construct(string $title, string $details, string $editTask, string $deleteTask, string $viewTask, string $cardStatus)
     {
         $this->title=$title;
         $this->details=$details;
         $this->editTask=$editTask;
         $this->deleteTask=$deleteTask;
         $this->viewTask=$viewTask;
+        $this->cardStatus=$cardStatus;
     }
+
+    public function cardStatusClass () {
+        if($this->cardStatus == 1) {
+            return 'completed';
+        } else {
+            return 'not-completed';
+        }
+    }
+
 
     /**
      * Get the view / contents that represent the component.

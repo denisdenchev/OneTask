@@ -1,4 +1,7 @@
-.footer {
+.footerWrapper {
+    background-color: $beige;
+
+    .footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -7,4 +10,6 @@
     padding: $headerFooterPadding;
     border-top: $solidRedBorder;
     min-height: $headerFooterHeight;
+    border-radius: 100px 100px 0 0;
+}
 }

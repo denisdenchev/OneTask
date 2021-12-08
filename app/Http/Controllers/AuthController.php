@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests\CreateUser;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\WelcomeMail;
 
 use Illuminate\Support\Facades\Hash;
 
@@ -47,17 +49,20 @@ class AuthController extends Controller
     //Register/create a user
     public function createUser(CreateUser $request) {
         
-        $user = new User;
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = Hash::make($request->password);
-        $user->save();
-        
-        return redirect('user/registerSuccess');
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password)
+        ]);
+
+
+        return redirect(route('registerSuccess', ['email' => $request->email]));
     }
 
     //Successfull user registration
-    public function registerSuccess() {
+    public function registerSuccess(Request $request) {
+        $email = $request->email;
+        Mail::to($email)->send(new WelcomeMail);
         return view('registerSuccess', ['linkUrl'=>route('login'),'linkText'=>'Log in']);
     }
 

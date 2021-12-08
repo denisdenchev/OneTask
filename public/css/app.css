@@ -51,6 +51,7 @@
 .createTask {
   min-height: 70vh;
   padding: 20px;
+  background-color: #FEF9EF;
 }
 .createTask .createTaskForm {
   display: flex;
@@ -58,7 +59,29 @@
   align-items: center;
 }
 
-.footer {
+.viewTask {
+  min-height: 70vh;
+  padding: 20px;
+  background-color: #FEF9EF;
+}
+.viewTask .cardView {
+  display: flex;
+  justify-content: center;
+}
+.viewTask .cardView .viewCard {
+  border-radius: 15px;
+  margin: 20px;
+  width: 80%;
+}
+.viewTask .cardView .cardDetails {
+  color: #227C9D;
+  padding: 10px;
+}
+
+.footerWrapper {
+  background-color: #FEF9EF;
+}
+.footerWrapper .footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -67,25 +90,30 @@
   padding: 10px 20px;
   border-top: 4px solid red;
   min-height: 15vh;
+  border-radius: 100px 100px 0 0;
 }
 
-.header {
+.headerWrapper {
+  background-color: #FEF9EF;
+}
+.headerWrapper .header {
   height: 100px;
+  padding: 10px 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-bottom: 4px solid red;
   background-color: #17C3B2;
-  padding: 10px 20px;
   min-height: 15vh;
+  border-radius: 0 0 100px 100px;
 }
-.header .headerGreeting {
+.headerWrapper .header .headerGreeting {
   margin: 5px 0;
   font-weight: 700;
   color: #1f1d1d;
 }
-.header .CTA {
+.headerWrapper .header .CTA {
   font-size: 1.2rem;
   text-decoration: none;
   color: #1f1d1d;
@@ -136,7 +164,7 @@
 
 .inputsWrapper {
   margin: 10px 0;
-  width: 300px;
+  min-width: 300px;
   display: flex;
   flex-flow: column wrap;
 }
@@ -151,8 +179,10 @@
   border: 2px solid #17C3B2;
   border-radius: 5px;
   font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0);
 }
 .inputsWrapper textarea {
+  background-color: rgba(0, 0, 0, 0);
   margin-top: 5px;
   padding: 5px;
   border: 2px solid #17C3B2;
@@ -163,7 +193,7 @@
 .card {
   margin: 20px;
   width: 250px;
-  height: 200px;
+  min-height: 250px;
   background-color: #b1b1b1;
   padding: 10px;
   border: none;
@@ -172,6 +202,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.card .completed {
+  color: #02f102;
+}
+.card .not-completed {
+  color: #FE6D73;
 }
 .card .cardTitle {
   text-align: center;
@@ -200,6 +236,6 @@
 body .bodyContent {
   min-height: 70vh;
   background-color: #FEF9EF;
-  padding: 20px;
+  padding: 20px 60px;
   overflow: scroll;
 }

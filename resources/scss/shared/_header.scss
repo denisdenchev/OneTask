@@ -1,22 +1,28 @@
-.header {
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: $solidRedBorder;
-    background-color: $primaryBackgroundColour;
-    padding: $headerFooterPadding;
-    min-height: $headerFooterHeight;
+.headerWrapper {
 
-    .headerGreeting {
-        margin: 5px 0;
-        font-weight: $bold;
-        color: $primaryDarkColour;
+    background-color: $beige;
+
+    .header {
+        height: 100px;
+        padding: $primary10 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: $solidRedBorder;
+        background-color: $primaryBackgroundColour;
+        min-height: $headerFooterHeight;
+        border-radius: 0 0 100px 100px;
+
+        .headerGreeting {
+            margin: 5px 0;
+            font-weight: $bold;
+            color: $primaryDarkColour;
+        }
+
+        .CTA {
+            @include ctaLinks;
+        }
+
     }
-
-    .CTA {
-        @include ctaLinks;
-    }
-
 }

@@ -51,7 +51,7 @@
 
 .inputsWrapper {
     margin: 10px 0;
-    width: 300px;
+    min-width: 300px;
     display: flex;
     flex-flow: $columnWrap;
 
@@ -75,15 +75,23 @@
 .card {
     margin: 20px;
     width: 250px;
-    height: 200px;
-    background-color: rgb(177, 177, 177);
+    min-height: 250px;
+    background-color: $secondaryDarkColour;
     padding: 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: $primary10;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .completed {
+        color: $successColour;
+    }
+
+    .not-completed {
+        color: $alertColour;
+    }
 
     .cardTitle {
         text-align: center;

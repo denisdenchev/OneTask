@@ -1,11 +1,33 @@
 //Create Task
 .createTask {
-    min-height: 70vh;
-    padding: $primary20padding;
+    @include tasksBody;
 
     .createTaskForm {
         display: flex;
         flex-flow: $columnWrap;
         align-items: center;
+    }
+}
+
+//View Task
+.viewTask {
+    @include tasksBody;
+
+    .cardView {
+        display: flex;
+        justify-content: center;
+
+
+
+        .viewCard {
+            border-radius: $primary15;
+            margin: $primary20padding;
+            width: 80%;
+        }
+
+        .cardDetails {
+            color: $primaryFontColor;
+            padding: $primary10;
+        }
     }
 }

@@ -5,9 +5,11 @@
     border: $inputBorders;
     border-radius: $inputBordersRadius;
     font-size: $primaryFontSize;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 @mixin textAreaField {
+    background-color: rgba(0, 0, 0, 0);
     margin-top: 5px;
     padding: 5px;
     border: $inputBorders;
@@ -20,4 +22,10 @@
     text-decoration: none;
     color: $primaryDarkColour;
     font-weight: $lightlyBold;
+}
+
+@mixin tasksBody {
+    min-height: 70vh;
+    padding: $primary20padding;
+    background-color: $beige;
 }
